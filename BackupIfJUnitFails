@@ -1,3 +1,5 @@
+// This file can be copied into MainClass.java if JUnit fails
+
 
         System.out.println("Part 1");
 
