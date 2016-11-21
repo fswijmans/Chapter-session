@@ -1,6 +1,3 @@
-// This file can be copied into MainClass.java if JUnit fails
-
-
         System.out.println("Part 1");
 
         ApplicationProcess ap1 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, 12, 9, true), null));
