@@ -1,0 +1,16 @@
+        // Print all the names
+        members.forEach(x -> System.out.println(x.getName()));
+
+        // Sort the members based on number of cookies
+        members.sort((p1, p2) -> p1.getCookies().get().compareTo(p2.getCookies().get()));
+
+        members.forEach(x -> System.out.println(x.getName()));
+
+        // Filter based on number of cookies
+        filterMembers(members, "cookies", x -> ((ChapterMembers.Member) x).getCookies().get() > 600);
+
+        // Filter based on squad
+        filterMembers(members, "squad", x -> ((ChapterMembers.Member) x).getSquad().equals("Ivy"));
+
+        // Filter based on favorite animal
+        filterMembers(members, "favorite animal", x -> ((ChapterMembers.Member) x).getAnimal().orElse(ChapterMembers.FavoriteAnimal.BUNNY).equals(ChapterMembers.FavoriteAnimal.BIRD));

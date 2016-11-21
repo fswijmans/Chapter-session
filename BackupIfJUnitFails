@@ -1,0 +1,40 @@
+
+        System.out.println("Part 1");
+
+        ApplicationProcess ap1 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, 12, 9, true), null));
+        String outcome1 = ap1.isGoodApplicant() ? "solved" : "not solved";
+        System.out.println("Case ap1 is: " + outcome1);
+
+        ApplicationProcess ap2 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, null, null, true), null));
+        String outcome2 = ap2.isGoodApplicant() ? "not solved" : "solved";
+        System.out.println("Case ap2 is: " + outcome2);
+
+        // Remove comments for part 2
+
+
+      System.out.println("Part 2");
+
+        ApplicationProcess ap3 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, null, null, null),
+                new Person("Trudy", 79, 1800, null, null, null)));
+        String outcome3 = ap3.isGoodApplicant() ? "not solved" : "solved";
+        System.out.println("Case ap3 is: " + outcome3);
+
+        ApplicationProcess ap4 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, null, null, true),
+                new Person("Trudy", 79, 1800, 89, null, null)));
+        String outcome4 = ap4.isGoodApplicant() ? "solved" : "not solved";
+        System.out.println("Case ap4 is: " + outcome4);
+
+        ApplicationProcess ap5 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, null, 9, true),
+                new Person("Trudy", 79, 12, 1, null, true)));
+        String outcome5 = ap5.isGoodApplicant() ? "not solved" : "solved";
+        System.out.println("Case ap5 is: " + outcome5);
+
+        ApplicationProcess ap6 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, 152, 9, true),
+                new Person("Trudy", 79, 1800, null, 87, null)));
+        String outcome6 = ap6.isGoodApplicant() ? "not solved" : "solved";
+        System.out.println("Case ap6 is: " + outcome6);
+
+        ApplicationProcess ap7 = new ApplicationProcess(new Applicant(7, new Person("Harry", 8, 78, 12, 9, true),
+                new Person("Trudy", 79, 1800, 59, 20, false)));
+        String outcome7 = ap7.isGoodApplicant() ? "solved" : "not solved";
+        System.out.println("Case ap7 is: " + outcome7);

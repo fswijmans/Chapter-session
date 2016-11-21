@@ -1,0 +1,67 @@
+public class Person {
+
+    String name;
+    int age;
+    int income;
+    Optional<Integer> pets;
+    Optional<Integer> children;
+    Optional<Boolean> work;
+
+    Person(String name, int age, int income, Integer pets, Integer children, Boolean work) {
+        this.name = name;
+        this.age = age;
+        this.income = income;
+        this.pets = Optional.ofNullable(pets);
+        this.children = Optional.ofNullable(children);
+        this.work = Optional.ofNullable(work);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Optional<Integer> getChildren() {
+        return children;
+    }
+
+    public Optional<Boolean> getWork() {
+        return work;
+    }
+
+    public Optional<Integer> getPets() {
+        return pets;
+    }
+
+    public int getIncome() {
+        return income;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Applicant {
+
+    int id;
+    Person applicant;
+    Optional<Person> partner;
+
+    Applicant(int id, Person applicant, Person partner) {
+        this.id = id;
+        this.applicant = applicant;
+        this.partner = Optional.ofNullable(partner);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Person getApplicant() {
+        return applicant;
+    }
+
+    public Optional<Person> getPartner() {
+        return partner;
+    }
+}

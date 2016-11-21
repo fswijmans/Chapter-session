@@ -1,0 +1,8 @@
+            Person partner = this.applicant.getPartner().get();
+            return person.getName() != null
+                    && partner.getName() != null
+                    && person.getAge() != 0
+                    && partner.getAge() != 0
+                    && ((person.getPets().orElse(0) + partner.getPets().orElse(0)) > 18)
+                    && ((person.getChildren().orElse(0) + partner.getChildren().orElse(0)) < 42)
+                    && (person.getWork().isPresent() && (person.getWork().get() || partner.getWork().isPresent() && partner.getWork().get()));

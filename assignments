@@ -1,0 +1,44 @@
+Assignment Optionals:
+
+Part 1
+
+In this assignment we use optionals for an application form. The applicantion has to contain info about the applicant and if available about the partner. To succeed the first two unit tests in ApplicationProcessTest has to be solved. To start uncomment the everything in ApplicantProcess and the first two test cases in ApplicantProcessTest.
+The changes should be made to the Person and Applicant classes. Requirements are the following variables including getters and one constructor that takes the variables in given order:
+•	Person has required values: String name, int age, int income and optional variables int pets, int children, boolean work
+•	Applicant requires an int id, Person applicant and optional Person partner
+
+Part 2
+
+At this moment the ApplicationProcess is not correct. The partner is not checked. To successfully pass the tests the ApplicationPrcocess has to be updated. Uncomment the out commented remaining tests in ApplicationProcessTest and in ApplicationProcess and add the following checks:
+•	Total number of pets of person and partner together has to be bigger than 18.
+•	Total number of children of person and partner together has to be smaller than 42.
+•	At least one of the two needs to have a job.
+
+Assignments Lambda’s
+
+Part 3
+
+In the class ChapterMembers I have created an ArrayList of Member profiles for all our chapter members. Uncomment part 3 in the MainClass and use lambda expressions to find the following information:
+•	Print all the names
+•	Sort the members based on number of cookies and print them
+In the MainClass the static function filterMembers is present. This function takes an ArrayList of ChapterMembers.Member, a String to tell which kind of filter is used by you and a condition to filter on. This condition is a Functional Interface which accepts functions that resolve to a Boolean. Further understanding of this function is not necessary at this point. Use the filterMembers function to find the following information:
+•	Select members who have more than 600 cookies and print them
+•	Find out who are in squad Ivy
+•	Find the people who have a bunny as favourite animal
+
+Assignments Streams
+
+Part 4
+
+We will use the ArrayList of chapter members again and use streams combined with lambda’s to find the following information:
+•	Print all the names
+•	Calculate the total number of cookies and print it
+•	Filter on members with a pet, sort them based on squad name and print their name
+•	Sort on name, delete members with an odd id and print the favourite animals
+•	Double all the id’s, remove members without animals, divide the numbers of cookies by 14 and print these as floating values
+
+Part 5
+
+In this part we are going to read the stream from a file. Uncomment part 5 and change the fileName to match the location of the inputFile. Run the main function to see if the fileName has been set correct. A Stream object is created to hold the access to the file. Make the following changes to the stream:
+•	Change all the letters to lowercase letters, use the dot as separator between sentences and print all the sentences
+•	Count all the words that start with an L or l and which are longer than 5 characters
